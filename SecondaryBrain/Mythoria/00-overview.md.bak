@@ -1,0 +1,100 @@
+# Mythoria — Overview
+
+**Cluster:** Mythoria
+**Status:** Active
+**Last updated:** 2026-07-17 (4)
+
+## One-line summary
+
+Medieval fantasy multiplayer Discord RPG with card collection, trading, auctions, expeditions (auto-dungeon crawler, 600 floors, 30 regions), hero upgrades/merging, crafting (80+ recipes, 8 material families, 3 gear sets, 12 tools), mining & fishing (tool-based background tick loops with durability), drop card system (public card grabbing), and a web dashboard.
+
+## Packages
+
+- **MythoriaBot/** — Discord bot (Node.js 22 + TypeScript + discord.js v14)
+  - 32 slash commands across 12 game systems (+ button-based interactive pages)
+  - 18 services (business logic layer)
+  - 7 repositories (DB query layer)
+  - 8 BullMQ workers (async/background processing)
+  - 1 Express dashboard server for card importing with image upload
+  - Backup/restore scripts for DB + uploads
+- **MythoriaWeb/** — React SPA (Vite + React 18 + TypeScript + Tailwind CSS v4)
+  - Supabase Discord OAuth login
+  - 4 page routes + 9 components
+  - 1 Supabase Edge Function for card template import
+- **Database** — Local Docker stack
+  - **PostgreSQL 16** — direct connection via `pg` (node-postgres), lazy pool
+  - **Redis 7** — local container (cache, cooldowns, BullMQ queue backend)
+  - **Nginx** — serves static assets on port 3002 (environments, card artwork)
+
+## Core game systems
+| System | Node | Services | Commands |
+|--------|------|----------|----------|
+| Card System | [[02-card-system]] | CardService, ImageService | `/inspect`, `/disassemble`, `/msearch`, `/kit` |
+| Expeditions + Battles | [[05-expeditions]] | ExpeditionService, BattleService | `/mexplore` (start/status/stop) |
+| Economy & Crafting | [[06-economy-and-crafting]] | UserService, CraftingService, InventoryService | `/minventory`, `/mcraft`, `/mdaily`, `/mcd` |
+| Trading & Auctions | [[07-trading-and-auctions]] | TradeService, AuctionService | `/mtrade`, `/mauction` |
+| Hero Progression | [[08-upgrades]] | UpgradeService, MergeService | `/mupgrade`, `/mmerge` |
+| Admin Tools | [[03-admin-dashboard]] | Express dashboard, Edge Function | `/mimportcard`, `/mcleanup` |
+| Teams | [[01-system-architecture]] | TeamService | `/mteam` |
+| Workers | [[09-workers-architecture]] | 6 BullMQ workers | — |
+| Drop Cards | — | DropService | `/mdropcard` |
+| Mining & Fishing | — | MiningService, FishingService | `/mmine`, `/mfish` |
+| Invites | — | InviteService | `/minvite` |
+| Notifications | — | NotificationService, UserSettingsService | `/msettings` |
+
+## All commands
+
+| Command | Gate | Description |
+|---------|------|-------------|
+| `/mping` | — | Roundtrip latency |
+| `/mhelp` | — | DM guide |
+| `/mkit` | — | Starter kit (5 common cards) |
+| `/mstats` | dev | Profile overview with multi-page buttons |
+| `/minventory` | dev | Items, materials, equipment |
+| `/minspect` | dev | Card detail + image attachment |
+| `/msearch` | dev | Search heroes by name/quality/tier |
+| `/mupgrade` | — | Queue hero quality upgrade |
+| `/mmerge` | — | Merge 2 Excellent heroes for +1★ |
+| `/mdisassemble` | — | Salvage hero for coins + essence |
+| `/mtrade` | dev | Propose/cancel card trades |
+| `/mauction` | dev | Create/bid/cancel/list/info |
+| `/mexplore` | — | Start/status/stop expedition |
+| `/mteam` | — | Create/delete/rename/add/remove/list/status |
+| `/mcraft` | — | List recipes / craft items |
+| `/mdaily` | dev | Daily reward claim (+invite bonus) |
+| `/mimportcard` | owner | Import card template |
+| `/mcleanup` | owner | Purge all user data |
+| `npm run db:backup` | — | pg_dump + tar.gz uploads → `backups/<date>_<5-digit-id>.tar.gz` |
+| `npm run db:restore <id>` | — | Extracts backup, restores DB + uploads via docker compose exec |
+| `/mwiki` | — | Item/region lookup + listings |
+| `/minvite` | — | Create invite link, view rewards |
+| `/msettings` | — | Toggle notification preferences |
+| `/mcd` | — | View all cooldowns & active activities |
+| `/mmine` | — | Start mining with team + pickaxe |
+| `/mfish` | — | Start fishing with team + rod |
+| `/mdropcard` | — | Drop 3 random cards for public grab |
+| `/mhelp` | — | DM guide |
+| `/mrecipe` | — | View recipe details |
+
+## GRAPH METADATA
+- cluster: Mythoria
+- node_type: overview
+- importance_level: 1.0
+- hub_node: true
+- tags: #mythoria #overview
+
+```mermaid
+graph TD
+  O[00-overview] --> S[01-system-architecture]
+  O --> C[02-card-system]
+  O --> A[03-admin-dashboard]
+  O --> W[04-web-portal]
+  O --> E[05-expeditions]
+  O --> EC[06-economy-and-crafting]
+  O --> TA[07-trading-and-auctions]
+  O --> UP[08-upgrades]
+  O --> WR[09-workers-architecture]
+  O --> DR[Drop Cards]
+  O --> MF[Mining & Fishing]
+  O --> IS[Invite System]
+```

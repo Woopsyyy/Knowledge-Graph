@@ -1,0 +1,242 @@
+{
+  "main": {
+    "id": "29fadf9115102090",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe813539940833fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3b915e4b9d4fac7b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fd44cff8536c2cea",
+    "type": "split",
+    "children": [
+      {
+        "id": "bceb4583ece27af6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0f270e9163aa3c8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "16769f7c11dd6b62",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "[\"tags\"]",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f38772303a327ee6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 298.5
+  },
+  "right": {
+    "id": "08ed791ae0b3f10c",
+    "type": "split",
+    "children": [
+      {
+        "id": "7d6da1cdd62d2e2f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1eb7f04add593de0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "a8a54da62b7db645",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "1baa66718e4f72f9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "379db07d65b21c59",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5fcc266c5cc0361e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "8550e8c094d38d06",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
+          {
+            "id": "b0819ed5a3239cf4",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "realclaudian:Open Claudian": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "8550e8c094d38d06",
+  "lastOpenFiles": [
+    "Untitled.base",
+    "SecondaryBrain/MythoriaBot/how-many-cards-template-available.md",
+    "SecondaryBrain/Himawari-SMP/admin-investigator.md",
+    "SecondaryBrain/_Changelog/2026-07-22.md",
+    "SecondaryBrain/MythoriaBot",
+    "SecondaryBrain/GLOBAL-PROJECT-MEMORY.md",
+    "graphify-knowledge-graph.md",
+    "SecondaryBrain/MythoriaBot/MemoryVault/attack-mechanics.md",
+    "SecondaryBrain/MythoriaBot/MemoryVault",
+    "SecondaryBrain/MythoriaBot/11-battle-system-rework.md",
+    "SecondaryBrain/MythoriaBot/MemoryVault/card-tier-star-rarity-condition-details.md",
+    "SecondaryBrain/Mythoria/10-faction-and-raid-system.md",
+    "SecondaryBrain/Mythoria/09-workers-architecture.md",
+    "SecondaryBrain/Mythoria/08-upgrades.md",
+    "SecondaryBrain/Mythoria/07-trading-and-auctions.md",
+    "SecondaryBrain/Mythoria/06-economy-and-crafting.md",
+    "SecondaryBrain/Mythoria/03-admin-dashboard.md",
+    "SecondaryBrain/Mythoria/02-card-system.md",
+    "SecondaryBrain/Mythoria/00-overview.md",
+    "SecondaryBrain/_Changelog/2026-07-18.md",
+    "SecondaryBrain/_ManualPrompting/01-project-handoff-template.md",
+    "SecondaryBrain/_ManualPrompting/00-system-prompt.md",
+    "SecondaryBrain/_ManualPrompting/README.md",
+    "SecondaryBrain/Himawari-SMP/audit-log.md",
+    "SecondaryBrain/Himawari-SMP/combat-status.md",
+    "SecondaryBrain/Himawari-SMP/bounties.md",
+    "SecondaryBrain/Himawari-SMP/auction-marketplace.md",
+    "SecondaryBrain/TCC-Portal/TCC-Portal.md",
+    "SecondaryBrain/MythoriaBot/graph.canvas",
+    "SecondaryBrain/Mythoria/00-overview.md.bak",
+    "SecondaryBrain/Mythoria",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Ai - skills/Supabase",
+    "SecondaryBrain/GLOBAL-PROJECT-MEMORY.md.tmp.4520.5afb792b4037",
+    "SecondaryBrain/TCC-Portal",
+    "SecondaryBrain/NewBaritone/NewBaritone.md.tmp.8532.0a8dd042f4d8",
+    "SecondaryBrain/GLOBAL-PROJECT-MEMORY.md.tmp.41640.7b37165a798f"
+  ]
+}

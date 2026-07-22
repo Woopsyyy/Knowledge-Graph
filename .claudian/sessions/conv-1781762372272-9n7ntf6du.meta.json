@@ -1,0 +1,22 @@
+{
+  "id": "conv-1781762372272-9n7ntf6du",
+  "providerId": "claude",
+  "title": "hello",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1781762372275,
+  "updatedAt": 1781762377277,
+  "lastResponseAt": 1781762376460,
+  "sessionId": "9529f82e-cf65-4cb0-955b-f5c37c229ce4",
+  "providerState": {
+    "providerSessionId": "9529f82e-cf65-4cb0-955b-f5c37c229ce4"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 0,
+    "percentage": 0
+  }
+}
